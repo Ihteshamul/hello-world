@@ -1,92 +1,162 @@
 <!DOCTYPE html>
 <html>
-	  <title>Simple Sign up from</title>
-	    <head>
-		        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-			    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-			        <style>
+	  <head>
+		      <title>Account registration form</title>
+		          <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+			      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+			          <style>
       html, body {
-	            display: flex;
-		          justify-content: center;
-			        font-family: Roboto, Arial, sans-serif;
-				      font-size: 15px;
+	            min-height: 100%;
+		          }
+            body, div, form, input, select, p { 
+		          padding: 0;
+			        margin: 0;
+				      outline: none;
+				            font-family: Roboto, Arial, sans-serif;
+					          font-size: 14px;
+						        color: #666;
+							      }
+	          h1 {
+			        margin: 0;
+				      font-weight: 400;
 				            }
-            form {
-		          border: 5px solid #f1f1f1;
-			        }
-	          input[type=text], input[type=password] {
-			        width: 100%;
-				      padding: 16px 8px;
-				            margin: 8px 0;
-					          display: inline-block;
-						        border: 1px solid #ccc;
-							      box-sizing: border-box;
-							            }
-		        .icon {
-				      font-size: 110px;
+		        h3 {
+				      margin: 12px 0;
+				            color: #8ebf42;
+					          }
+			      .main-block {
 				            display: flex;
 					          justify-content: center;
-						        color: #4286f4;
+						        align-items: center;
+							      background: #fff;
+							            }
+			            form {
+					          width: 100%;
+						        padding: 20px;
 							      }
-			      button {
-				            background-color: #4286f4;
-					          color: white;
-						        padding: 14px 0;
-							      margin: 10px 0;
-							            border: none;
-								          cursor: grab;
-									        width: 48%;
-										      }
-			            h1 {
-					          text-align:center;
-						        fone-size:18;
-							      }
-				          button:hover {
-						        opacity: 0.8;
-							      }
-					        .formcontainer {
-							      text-align: center;
-							            margin: 24px 50px 12px;
-								          }
-						      .container {
-							            padding: 16px 0;
-								          text-align:left;
+				          fieldset {
+						        border: none;
+							      border-top: 1px solid #8ebf42;
+							            }
+					        .account-details, .personal-details {
+							      display: flex;
+							            flex-wrap: wrap;
+								          justify-content: space-between;
 									        }
-						            span.psw {
-								          float: right;
-									        padding-top: 0;
-										      padding-right: 15px;
-										            }
-							          /* Change styles for span on extra small screens */
-							          @media screen and (max-width: 300px) {
-									        span.psw {
-											      display: block;
-											            float: none;
-												          }
-										    </style>
-										      </head>
-										        <body>
-												    <form action="/action_page.php">
-													          <h1>SIGN UP</h1>
-														        <div class="icon">
-																        <i class="fas fa-user-circle"></i>
-																	      </div>
-																	            <div class="formcontainer">
-																			          <div class="container">
-																					          <label for="uname"><strong>Username</strong></label>
-																						          <input type="text" placeholder="Enter Username" name="uname" required>
-																							          <label for="mail"><strong>E-mail</strong></label>
-																								          <input type="text" placeholder="Enter E-mail" name="mail" required>
-																									          <label for="psw"><strong>Password</strong></label>
-																										          <input type="password" placeholder="Enter Password" name="psw" required>
-																											        </div>
-																												      <button type="submit"><strong>SIGN UP</strong></button>
-																												            <div class="container" style="background-color: #eee">
-																														            <label style="padding-left: 15px">
-																																            <input type="checkbox"  checked="checked" name="remember"> Remember me
-																																	            </label>
-																																		            <span class="psw"><a href="#">Forgot password?</a></span>
-																																			          </div>
-																																				      </form>
-																																				        </body>
-</html>
+						      .account-details >div, .personal-details >div >div {
+							            display: flex;
+								          align-items: center;
+									        margin-bottom: 10px;
+										      }
+						            .account-details >div, .personal-details >div, input, label {
+								          width: 100%;
+									        }
+							          label {
+									        padding: 0 5px;
+										      text-align: right;
+										            vertical-align: middle;
+											          }
+								        input {
+										      padding: 5px;
+										            vertical-align: middle;
+											          }
+									      .checkbox {
+										            margin-bottom: 10px;
+											          }
+									            select, .children, .gender, .bdate-block {
+											          width: calc(100% + 26px);
+												        padding: 5px 0;
+													      }
+										          select {
+												        background: transparent;
+													      }
+											        .gender input {
+													      width: auto;
+													            } 
+												      .gender label {
+													            padding: 0 5px 0 0;
+														          } 
+												            .bdate-block {
+														          display: flex;
+															        justify-content: space-between;
+																      }
+													          .birthdate select.day {
+															        width: 35px;
+																      }
+														        .birthdate select.mounth {
+																      width: calc(100% - 94px);
+																            }
+															      .birthdate input {
+																            width: 38px;
+																	          vertical-align: unset;
+																		        }
+															            .checkbox input, .children input {
+																	          width: auto;
+																		        margin: -2px 10px 0 0;
+																			      }
+																          .checkbox a {
+																		        color: #8ebf42;
+																			      }
+																	        .checkbox a:hover {
+																			      color: #82b534;
+																			            }
+																		      button {
+																			            width: 100%;
+																				          padding: 10px 0;
+																					        margin: 10px auto;
+																						      border-radius: 5px; 
+																						            border: none;
+																							          background: #8ebf42; 
+																								        font-size: 14px;
+																									      font-weight: 600;
+																									            color: #fff;
+																										          }
+																		            button:hover {
+																				          background: #82b534;
+																					        }
+																			          @media (min-width: 568px) {
+																					        .account-details >div, .personal-details >div {
+																							      width: 50%;
+																							            }
+																						      label {
+																							            width: 40%;
+																								          }
+																						            input {
+																								          width: 60%;
+																									        }
+																							          select, .children, .gender, .bdate-block {
+																									        width: calc(60% + 16px);
+																										      }
+																								        }
+																				      </style>
+																				        </head>
+																					  <body>
+																						      <div class="main-block">
+																							          <form action="/">
+																									        <h1>Create a free account</h1>
+																										      <fieldset>
+																											              <legend>
+																													                <h3>Account Details</h3>
+																															        </legend>
+																																        <div  class="account-details">
+																																		          <div><label>Email*</label><input type="text" name="name" required></div>
+																																			            <div><label>Password*</label><input type="password" name="name" required></div>
+																																				              <div><label>Repeat email*</label><input type="text" name="name" required></div>
+																																					                <div><label>Repeat password*</label><input type="password" name="name" required></div>
+																																							        </div>
+																																								      </fieldset>
+																																								            <fieldset>
+																																										            <legend>
+																																												              <h3>Personal Details</h3>
+																																													              </legend>
+																																														              <div  class="personal-details">
+																																																                <div>
+																																																			            <div><label>Name*</label><input type="text" name="name" required></div>
+																																																				                <div><label>Phone*</label><input type="text" name="name" required></div>
+																																																						            <div><label>Street</label><input type="text" name="name"></div>
+																																																							                <div><label>City*</label><input type="text" name="name" required></div>
+																																																									            <div>
+																																																											                  <label>Country*</label>  
+																																																													                <select>
+																																																																                <option value=""></option>
+																																																																		  
