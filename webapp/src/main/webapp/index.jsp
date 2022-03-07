@@ -1,162 +1,94 @@
 <!DOCTYPE html>
 <html>
 	  <head>
-		      <title>Account registration form</title>
-		          <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-			      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+		      <title>Registration with facebook, twitter and google</title>
+		          <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+			      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 			          <style>
       html, body {
-	            min-height: 100%;
-		          }
-            body, div, form, input, select, p { 
+	            display: flex;
+		          justify-content: center;
+			        align-items: center;
+				      height: 100%;
+				            }
+            body, div, p { 
 		          padding: 0;
 			        margin: 0;
 				      outline: none;
 				            font-family: Roboto, Arial, sans-serif;
-					          font-size: 14px;
+					          font-size: 16px;
 						        color: #666;
 							      }
-	          h1 {
-			        margin: 0;
-				      font-weight: 400;
+	          body {
+			        background: url("/uploads/media/default/0001/01/49bff73f282c2c21f3341f1fe457fe35337b1792.jpeg") no-repeat center;
+				      background-size:cover;
 				            }
-		        h3 {
-				      margin: 12px 0;
-				            color: #8ebf42;
+		        h1 {
+				      margin: 0 0 10px 0;
+				            font-weight: 400;
 					          }
 			      .main-block {
 				            display: flex;
-					          justify-content: center;
-						        align-items: center;
-							      background: #fff;
-							            }
-			            form {
-					          width: 100%;
-						        padding: 20px;
-							      }
-				          fieldset {
-						        border: none;
-							      border-top: 1px solid #8ebf42;
-							            }
-					        .account-details, .personal-details {
-							      display: flex;
-							            flex-wrap: wrap;
-								          justify-content: space-between;
+					          width: 90%;
+						        padding: 10px 0; 
+							      border-radius: 5px;
+							            box-shadow: 1px 1px 8px 0px #666; 
+								          background: #fff;
 									        }
-						      .account-details >div, .personal-details >div >div {
+			            .block-item {
+					          width: 50%;
+						        padding: 20px; 
+							      }
+				          .block-item.right {
+						        border-left: 1px solid #aaa;
+							      }
+					        i {
+							      width: 50px;
+							            font-size: 24px;
+								          }
+						      .btn {
 							            display: flex;
 								          align-items: center;
-									        margin-bottom: 10px;
-										      }
-						            .account-details >div, .personal-details >div, input, label {
-								          width: 100%;
-									        }
-							          label {
-									        padding: 0 5px;
-										      text-align: right;
-										            vertical-align: middle;
-											          }
-								        input {
-										      padding: 5px;
-										            vertical-align: middle;
-											          }
-									      .checkbox {
-										            margin-bottom: 10px;
-											          }
-									            select, .children, .gender, .bdate-block {
-											          width: calc(100% + 26px);
-												        padding: 5px 0;
-													      }
-										          select {
-												        background: transparent;
-													      }
-											        .gender input {
-													      width: auto;
-													            } 
-												      .gender label {
-													            padding: 0 5px 0 0;
-														          } 
-												            .bdate-block {
-														          display: flex;
-															        justify-content: space-between;
-																      }
-													          .birthdate select.day {
-															        width: 35px;
-																      }
-														        .birthdate select.mounth {
-																      width: calc(100% - 94px);
+									        width: 100%;
+										      height: 40px;
+										            margin: 10px 0;
+											          outline: none;
+												        border: 0;
+													      border-radius: 5px;
+													            box-shadow: 2px 2px 2px #666;
+														          background: #e8e8e8;
+															        color: #fff;
+																      cursor: pointer;
 																            }
-															      .birthdate input {
-																            width: 38px;
-																	          vertical-align: unset;
-																		        }
-															            .checkbox input, .children input {
-																	          width: auto;
-																		        margin: -2px 10px 0 0;
-																			      }
-																          .checkbox a {
-																		        color: #8ebf42;
-																			      }
-																	        .checkbox a:hover {
-																			      color: #82b534;
-																			            }
-																		      button {
-																			            width: 100%;
-																				          padding: 10px 0;
-																					        margin: 10px auto;
-																						      border-radius: 5px; 
-																						            border: none;
-																							          background: #8ebf42; 
-																								        font-size: 14px;
-																									      font-weight: 600;
-																									            color: #fff;
-																										          }
-																		            button:hover {
-																				          background: #82b534;
-																					        }
-																			          @media (min-width: 568px) {
-																					        .account-details >div, .personal-details >div {
-																							      width: 50%;
-																							            }
-																						      label {
-																							            width: 40%;
-																								          }
-																						            input {
-																								          width: 60%;
-																									        }
-																							          select, .children, .gender, .bdate-block {
-																									        width: calc(60% + 16px);
-																										      }
-																								        }
-																				      </style>
-																				        </head>
-																					  <body>
-																						      <div class="main-block">
-																							          <form action="/">
-																									        <h1>Create a free account</h1>
-																										      <fieldset>
-																											              <legend>
-																													                <h3>Account Details</h3>
-																															        </legend>
-																																        <div  class="account-details">
-																																		          <div><label>Email*</label><input type="text" name="name" required></div>
-																																			            <div><label>Password*</label><input type="password" name="name" required></div>
-																																				              <div><label>Repeat email*</label><input type="text" name="name" required></div>
-																																					                <div><label>Repeat password*</label><input type="password" name="name" required></div>
-																																							        </div>
-																																								      </fieldset>
-																																								            <fieldset>
-																																										            <legend>
-																																												              <h3>Personal Details</h3>
-																																													              </legend>
-																																														              <div  class="personal-details">
-																																																                <div>
-																																																			            <div><label>Name*</label><input type="text" name="name" required></div>
-																																																				                <div><label>Phone*</label><input type="text" name="name" required></div>
-																																																						            <div><label>Street</label><input type="text" name="name"></div>
-																																																							                <div><label>City*</label><input type="text" name="name" required></div>
-																																																									            <div>
-																																																											                  <label>Country*</label>  
-																																																													                <select>
-																																																																                <option value=""></option>
-																																																																		  
+						            .btn:hover {
+								          transform: scale(1.03);
+									        }
+							          .btn span {
+									        font-size: 16px;
+										      }
+								        .facebook {
+										      background: #3a589e;
+										            }
+									      .twitter {
+										            background: #429cd6;
+											          }
+									            .google{
+											          background: #d34836;
+												        }
+										        </style>
+											  </head>
+											    <body>
+												        <div class="main-block">
+														      <div class="block-item left">
+															              <h1>Sign up with:</h1>
+																              <p><small>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</small>
+																	              </p>
+																		            </div>
+																			          <div class="block-item right">
+																					          <button class="btn facebook" data-provider="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></button>
+																						          <button class="btn twitter" data-provider="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></button>
+																							          <button class="btn google" data-provider="google"><i class="fab fa-google"></i><span>Google</span></button>
+																								        </div>
+																									    </div>
+																									      </body>
+</html>
