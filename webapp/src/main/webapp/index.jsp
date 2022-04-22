@@ -1,19 +1,23 @@
-<form action="/action_page.php">
-	  <h2>Register Form</h2>
-	    <div class="input-container">
-		        <i class="fa fa-user icon"></i>
-			    <input class="input-field" type="text" placeholder="Username" name="usrnm">
-			      </div>
+<div class="container">
+	  <form action="action_page.php">
 
-			        <div class="input-container">
-					    <i class="fa fa-envelope icon"></i>
-					        <input class="input-field" type="text" placeholder="Email" name="email">
-						  </div>
+		      <label for="fname">First Name</label>
+		          <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-						    <div class="input-container">
-							        <i class="fa fa-key icon"></i>
-								    <input class="input-field" type="password" placeholder="Password" name="psw">
-								      </div>
+			      <label for="lname">Last Name</label>
+			          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-								        <button type="submit" class="btn">Register</button>
-</form>
+				      <label for="country">Country</label>
+				          <select id="country" name="country">
+						        <option value="australia">Australia</option>
+							      <option value="canada">Canada</option>
+							            <option value="usa">USA</option>
+								        </select>
+
+									    <label for="subject">Subject</label>
+									        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+										    <input type="submit" value="Submit">
+
+										      </form>
+</div>
