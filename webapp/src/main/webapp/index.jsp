@@ -1,14 +1,9 @@
-<div class="form-popup" id="myForm">
-	  <form action="/action_page.php" class="form-container">
-		      <h1>Login</h1>
+<!DOCTYPE html>
+<html>
+	<body>
 
-		          <label for="email"><b>Email</b></label>
-			      <input type="text" placeholder="Enter Email" name="email" required>
+		<h1>My First Heading</h1>
+		<p>My first paragraph.</p>
 
-			          <label for="psw"><b>Password</b></label>
-				      <input type="password" placeholder="Enter Password" name="psw" required>
-
-				          <button type="submit" class="btn">Login</button>
-					      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-					        </form>
-</div>
+	</body>
+</html>
