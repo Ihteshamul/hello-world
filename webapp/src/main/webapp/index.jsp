@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-	<body>
+ <html>
+	 <body>
 
-		<h1>My First Heading</h1>
-		<p>My first paragraph.</p>
+		 <p>This is a paragraph
+		 <p>This is a paragraph
 
-	</body>
-</html>>
+	 </body>
+ </html>
