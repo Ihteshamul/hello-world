@@ -1,2 +1,9 @@
-<img src="img_typo.jpg" alt="Girl with a jacket">
+<!DOCTYPE html>
+<html>
+	<body>
 
+		<h1>My First Heading</h1>
+		<p>My first paragraph.</p>
+
+	</body>
+</html>
