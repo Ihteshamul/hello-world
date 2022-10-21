@@ -1,8 +1,2 @@
- <html>
-	 <body>
+<img src="img_typo.jpg" alt="Girl with a jacket">
 
-		 <p>This is a paragraph
-		 <p>This is a paragraph
-
-	 </body>
- </html>
